@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import {
   CircleCheckBig,
   ExternalLink,
@@ -407,7 +408,14 @@ export function PortfolioPage() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-[2.4rem] bg-red/10 blur-3xl" />
               <div className="relative h-[420px] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-black/10 md:h-[680px]">
-                <img src="/profile.png" alt="Rajshekar Badiger" className="absolute inset-0 h-full w-full object-cover" />
+                <Image
+                  src="/profile.png"
+                  alt="Rajshekar Badiger"
+                  fill
+                  priority
+                  sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 45vw, 100vw"
+                  className="object-cover"
+                />
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,42,42,0.12),transparent_40%)]" />
                 <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10" />
               </div>
@@ -430,10 +438,12 @@ export function PortfolioPage() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,42,42,0.28),transparent_38%),linear-gradient(160deg,rgba(255,255,255,0.07),transparent_42%)]" />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.28))]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,42,42,0.36),transparent_32%),linear-gradient(180deg,transparent,rgba(0,0,0,0.6))]" />
-                <img
+                <Image
                   src="/profile.png"
                   alt="Rajshekar Badiger"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  sizes="(min-width: 1280px) 28vw, (min-width: 1024px) 36vw, 90vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 flex items-end p-6">
                   <div className="backdrop-blur-sm bg-black/30 rounded-lg px-4 py-2">
